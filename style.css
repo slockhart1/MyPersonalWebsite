@@ -1,0 +1,134 @@
+body {
+  min-width: 600px;
+  margin: auto;
+}
+
+#topnav {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  align-items: center;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 600px;
+  background-color: navy;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+}
+#topnav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: navy;
+  height: 50px;
+  color: white;
+  border: 0px;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#topnav a:hover {
+  background-color: rgb(62, 89, 243);
+}
+#logoimg {
+  height: 70px;
+  margin-top: 5px;
+  margin-left: -20px;
+  margin-right: -10px;
+}
+#topnav h1 {
+  color: white;
+}
+#topnav #title {
+  display: flex;
+}
+#topnav #ikon {
+  height: 45px;
+}
+#topnav #ikon2 {
+  height: 30px;
+}
+#backgroundimg {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 600px;
+  margin-top: 50px;
+}
+#backgroundimg #search {
+  display: flex;
+  text-align: center;
+  font-size: 200%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(202, 202, 202, 0.379);
+  border: solid rgba(192, 192, 192, 0.619) 2px;
+  border-radius: 20px;
+}
+#backgroundimg #name {
+    color: darkred;
+    display: flex;
+  text-align: center;
+  font-size: 300%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: auto;
+  text-align: center;
+}
+#search::placeholder {
+  color: rgba(255, 255, 255, 0.703);
+  font-size: 80%;
+}
+#homepageimg {
+  width: 100%;
+}
+#paragraph1 {
+  background-color: gray;
+  margin-top: -22px;
+  padding: 20px;
+  color: white;
+}
+#paragraph1 h4 {font-size: 1.5em;}
+#paragraph1 img {display: flex;
+    width: 100%; margin-left: auto;
+margin-right: auto;
+max-width: 800px;}
+#bottom {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr 1fr;
+  min-width: 600px;
+  text-align: center;
+  background-color: lightgrey;
+}
+#bottom #contact {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+#bottom #links {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+}
+#bottom li {
+  list-style-type: none;
+  
+}
+#bottom h3 {
+  margin-right: -30px;
+}
+#bottom a {text-decoration: none; color: black;}
