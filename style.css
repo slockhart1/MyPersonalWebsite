@@ -1,8 +1,8 @@
 body {
-  min-width: 600px;
-  margin: auto;
+  overflow-x: hidden;
 }
 
+/* Top Navigation Bar */
 #topnav {
   display: flex;
   justify-content: space-around;
@@ -14,7 +14,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  min-width: 600px;
+  min-width: 650px;
   background-color: navy;
   overflow: hidden;
   position: fixed;
@@ -53,33 +53,35 @@ body {
 #topnav #ikon2 {
   height: 30px;
 }
+
+/* Page Top Images and Text */
 #backgroundimg {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 350px;
+  overflow: hidden;
+
   margin-top: 50px;
-  
 }
-#backgroundimg #search {
-  display: flex;
-  text-align: center;
-  font-size: 200%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  margin: auto;
-  text-align: center;
-  background-color: rgba(202, 202, 202, 0.379);
-  border: solid rgba(192, 192, 192, 0.619) 2px;
-  border-radius: 20px;
+#homepageimg {
+  width: 110%;
+  object-fit: cover;
+  height: 100%;
 }
+#pagebuffer {
+  height: 45px;
+}
+
 #backgroundimg #name {
-    color: darkred;
-    display: flex;
+  color: red;
+  text-shadow: 3px 3px 2px black;
+  display: flex;
   text-align: center;
   font-size: 300%;
   top: 50%;
@@ -93,27 +95,69 @@ body {
   color: rgba(255, 255, 255, 0.703);
   font-size: 80%;
 }
-#homepageimg {
-  width: 100%;
+
+
+/* Slideshow first page */
+#slides {
+  border-radius: 3px;
 }
+#slides-container {
+  height: 450px;
+  overflow: hidden;
+}
+#slides-container img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+
+/* Body of each page */
 #paragraph1 {
-  background-color: gray;
+  box-sizing: border-box;
+  width: 96%;
+  min-width: 600px;
+  background-color: lightgrey;
   margin-top: -22px;
   padding: 20px;
-  color: white;
+  margin: 2% auto;
+  color: black;
+  border-radius: 8px;
+  max-width: 1000px;
+  justify-content: center;
 }
-#paragraph1 h4 {font-size: 1.5em;}
-#paragraph1 img {display: flex;
-    width: 100%; margin-left: auto;
-margin-right: auto;
-max-width: 800px;}
+#paragraph1 h1 {
+  text-align: center;
+  margin-top: 0px;
+  color: #0077b6;
+  text-shadow: 2px 2px 3px white;
+}
+#paragraph1 h4 {
+  font-size: 1.5em;
+}
+#paragraph1 p {
+  font-size: 1.2em;
+}
+#paragraph1 img {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Bottom section of the page */
 #bottom {
+  box-sizing: border-box;
+  width: 96%;
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: 1fr 1fr;
   min-width: 600px;
+  max-width: 1000px;
   text-align: center;
   background-color: lightgrey;
+  margin: 0 auto 20px;
+  border-radius: 8px;
 }
 #bottom #contact {
   grid-column: 1;
@@ -127,9 +171,14 @@ max-width: 800px;}
 }
 #bottom li {
   list-style-type: none;
-  
 }
 #bottom h3 {
   margin-right: -30px;
 }
-#bottom a {text-decoration: none; color: black;}
+#bottom a {
+  text-decoration: none;
+  color: black;
+}
+#bottom a:hover {
+  color: blue;
+}

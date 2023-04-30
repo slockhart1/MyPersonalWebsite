@@ -6,67 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="images/ApresMafiaIsolatedLogoTransparentBG.png" type="image/x-icon" />
-
+    <link
+      rel="icon"
+      href="images/ApresMafiaIsolatedLogoTransparentBG(3).png"
+      type="image/x-icon"
+      
+    />
   </head>
   <body>
     <div id="topnav">
-        <a href="index.html"><div id="title">
+      <a href="index.html"
+        ><div id="title">
           <img
             id="logoimg"
             src="images/ApresMafiaIsolatedLogoTransparentBG.png"
             alt="Logo"
           />
-          <h1>ApresMafia</h1></div></a>
-     <a href="destinations.html">Destinations</a>
-     <a href="events.html">Events</a>
-     <a href="tips.html">Tips</a>
+          <h1>ApresMafia</h1>
+        </div></a
+      >
+      <a href="destinations.html">Reviews</a>
+      <a href="tips.html">Tips</a>
+      <a href="events.html">Events</a>
       <a href="community.html">Community</a>
-      <a href="sitemap.html">
+      <!-- <a href="sitemap.html">
         <img id="ikon" src="images/search.svg" alt="Search Ikon" />
-      </a>
-      <a href="">
+      </a> -->
+      <a href="sitemap.html">
         <img
           id="ikon2"
           src="images/menu-button-of-three-horizontal-lines-svgrepo-com.svg"
           alt="Horizontal Lines"
         />
       </a>
+    </div>
+    <div id="pagebuffer">
       
     </div>
-    <div id="pagelayout">
-      <div id="backgroundimg">
-        <div>
-          <form action="">
-            <input
-              type="text"
-              id="search"
-              name="searchinput"
-              placeholder="Find your next adventure..."
-            />
-          </form>
-        </div>
+    <div id="paragraph1" >
+      <h1>Welcome to ApresMafia!</h1>
+      <div id="slides-container">
         <img
-          id="homepageimg"
+          id="slides"
           src="images/Screenshot 2023-01-29 174228.png"
           alt="Big Sky Photo"
         />
       </div>
-      <div id="paragraph1">
-        <h1>What is ApresMafia?</h1>
-        <p>
-          Are you looking for your next skiing adventure, apres-ski spot, or
-          tips to help improve your skiing abilities? ApresMafia is a
-          compilation of all information about the ski industry. Find your next
-          destination with details on how to take full advantage of the location
-          and the inside scoop on cool spots that you otherwise may not know
-          about. Find places to go after your ski day ends, from great apres-ski
-          spots to fun stuff to do with the family around each ski resort. If
-          you are looking to improve your skiing abilities or are trying to look
-          less like a jerry on the mountain, you can find tips and tricks to
-          keep in mind for your next alpine endeavor.
-        </p>
-      </div>
+      
+      <p>
+        Are you looking for your next skiing adventure, apres-ski spot, or tips
+        to help improve your skiing abilities? Well, I may not be able to
+        provide you with that at the moment but I plan on being able to offer
+        all that as I journey from resort to resort. This is my personal website
+        where I compile information about the ski industry. It may not be much
+        now, but I plan to review any resorts I go to with included information
+        on my favorite trails, chairs, and apres-ski spots. <br /><br />
+        My goal with this website is to provide myself with a log of information
+        the destinations I've been to. This website is mostly for myself but
+        with the added benefit of possibly helping other skiers. I will be
+        sharing all my knowledge here and I have made it my mission to display
+        it in a good looking format.
+      </p>
     </div>
     <div id="bottom">
       <div id="contact">
@@ -82,12 +82,39 @@
       <div id="links">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="destinations.html">Reviews</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="tips.html">Tips</a></li>
           <li><a href="community.html">Community</a></li>
         </ul>
       </div>
     </div>
+    <script>
+      const imageEl = document.getElementById("slides");
+      const images = [
+        "images/Screenshot 2023-01-29 174228.png",
+        "images/skiing(1).png",
+        "images/skiing(2).png",
+        "images/skiing(3).png",
+        "images/skiing(4).png",
+        "images/skiing(5).png",
+      ];
+      let index = 0;
+
+      function changeImg() {
+        if (index === images.length) {
+          index = 0;
+        }
+        const imageSrc = images[index];
+        imageEl.src = imageSrc;
+
+        index++;
+        setTimeout(changeImg, 3500);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        changeImg();
+      });
+    </script>
   </body>
 </html>
