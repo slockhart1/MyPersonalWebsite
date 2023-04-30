@@ -41,19 +41,105 @@
         <img src="images/skiing(4).png" alt="">
       </div>
       <div id="paragraph1">
-        <h1>Have Comments or Questions?</h1>
-        <p>
-            <form action="https://oim-apis.up.railway.app/form2" method="post">
-                <textarea
-              name="comments"
-              id="comments"
-              cols="30"
-              rows="10"
-              placeholder="Enter your comment here..."
-            ></textarea>
-            <input type="submit" value="Submit" />
-            </form>
-        </p>
+        <h1>Post Your Own Review</h1>
+        <form action="https://oim-apis.up.railway.app/form2" method="post">
+          <fieldset id="info">
+            <legend>Your Information:</legend>
+            <div>
+              <label for="name-input">Name:</label>
+              <input
+                type="text"
+                placeholder="Enter your name here"
+                id="name-input"
+                name="Name"
+              />
+            </div>
+            <div>
+              <label for="email-input">Email:</label>
+              <input
+                type="text"
+                placeholder="Enter your email here"
+                id="email-input"
+                name="Email"
+              />
+            </div>
+            <div>
+              <label for="location-input">Location:</label>
+              <input
+                list="location-list"
+                id="location-input"
+                name="Location"
+                placeholder="Enter your location here"
+              />
+              <datalist id="location-list">
+                <option value="East Coast"></option>
+                <option value="West Coast">West Coast</option>
+                <option value="European Alps">European Alps</option>
+                <option value="Himalayas">Himalayas</option>
+                <option value="Other"></option>
+              </datalist>
+            </div>
+          </fieldset>
+          <br>
+          <fieldset id="review">
+            <legend>Your Review:</legend>
+            <div>
+              <label for="resort">Which resort would you like to review? </label>
+              <input type="text" name="Resort Reviewed" id="resort" placeholder="Enter resort name here">
+                
+            </input>
+            </div>
+            <div>
+              <label for="opinion">What do you think of this resort?</label>
+              <br />
+              <br>
+              <label>
+                <input type="radio" name="Opinion" value="Incredible" id="opinion" />
+                Incredible
+              </label>
+              <label>
+                <input type="radio" name="Opinion" value="Awesome" id="opinion" />
+                Awesome
+              </label>
+              <label>
+                <input type="radio" name="Opinion" value="Good" id="opinion" />
+                Good
+              </label>
+              <input type="radio" name="Opinion" value="Bad" id="opinion" />
+                Bad
+              </label>
+              <input type="radio" name="Opinion" value="Terrible" id="opinion" />
+                Terrible
+              </label>
+            </div>
+            <div>
+              <label for="comments">Why did you give the resort this rating?</label>
+              <br /><br>
+              <textarea
+                name="Comments"
+                id="comments"
+                cols="50"
+                rows="5"
+              ></textarea>
+            </div>
+            <div>
+              <label for="update"></label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Update"
+                  value="yes"
+                  id="update"
+                  checked
+                />Sign me up for email updates
+              </label>
+            </div>
+            <div>
+              <input type="submit" value="Submit" />
+              <input type="reset" value="Reset" />
+            </div>
+          </fieldset>
+        </form>
       </div>
     </div>
     <div id="bottom">
@@ -77,5 +163,41 @@
         </ul>
       </div>
     </div>
+    <script>
+       const form = document.querySelector('form');
+const nameInput = document.querySelector('#name-input');
+const emailInput = document.querySelector('#email-input');
+const resortInput = document.querySelector('#resort');
+
+function validateForm(event) {
+  event.preventDefault();
+  
+  if (nameInput.value === '') {
+    alert('Please enter your name');
+    return false;
+  }
+  
+  if (emailInput.value === '' || !isValidEmail(emailInput.value)) {
+    alert('Please enter a valid email address');
+    return false;
+  }
+  
+  if (resortInput.value === '') {
+    alert('Please enter the name of the resort you would like to review');
+    return false;
+  }
+  
+  // If all fields are filled out and valid, submit the form
+  form.submit();
+}
+
+function isValidEmail(email) {
+  // A simple email validation regular expression
+  const emailRegex = /\S+@\S+\.\S+/;
+  return emailRegex.test(email);
+}
+
+form.addEventListener('submit', validateForm);
+    </script>
   </body>
 </html>
