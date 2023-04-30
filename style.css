@@ -131,6 +131,18 @@ body {
   margin-top: 0px;
   color: #0077b6;
   text-shadow: 2px 2px 3px white;
+  animation: title-animation 5s ease-in-out infinite;;
+}
+@keyframes title-animation {
+  0% {
+    color: #0077b6; 
+  }
+  50% {
+    color: navy; 
+  }
+  100% {
+    color: #0077b6; 
+  }
 }
 #paragraph1 h4 {
   font-size: 1.5em;

@@ -38,11 +38,11 @@
         <div id="name">
             <h1>Community Involvement</h1>
         </div>
-        <img src="images/skiing(4).png" alt="">
+        <img src="images/skiing(4).png" alt="Big Ski Image" at="Big Sky" loading="lazy">
       </div>
       <div id="paragraph1">
         <h1>Post Your Own Review</h1>
-        <form action="https://oim-apis.up.railway.app/form2" method="post">
+        <form action="" method="" id="form">
           <fieldset id="info">
             <legend>Your Information:</legend>
             <div>
@@ -140,12 +140,13 @@
             </div>
           </fieldset>
         </form>
+        <br>
+        <div id="thank-you-message"></div>
       </div>
     </div>
     <div id="bottom">
       <div id="contact">
         <h3>Contact Information</h3>
-
         <ul>
           <li>Email: slockhart1@babson.edu</li>
           <li>Phone: (123)-456-7890</li>
@@ -168,6 +169,8 @@
 const nameInput = document.querySelector('#name-input');
 const emailInput = document.querySelector('#email-input');
 const resortInput = document.querySelector('#resort');
+const UserName = document.getElementById("name-input").value;
+const thankyou = document.getElementById("thank-you-message");
 
 function validateForm(event) {
   event.preventDefault();
@@ -189,15 +192,22 @@ function validateForm(event) {
   
   // If all fields are filled out and valid, submit the form
   form.submit();
+  // I tried to add a part where it thanks you for submitting the form, but I couldn't figure out how to thank the user without it opening another page or reloading the current one. 
+  thankyou.textContent = "Thank you," + UserName + "for submitting a review!"
 }
 
 function isValidEmail(email) {
-  // A simple email validation regular expression
   const emailRegex = /\S+@\S+\.\S+/;
   return emailRegex.test(email);
 }
-
 form.addEventListener('submit', validateForm);
+
+function theme() {
+
+}
+
+
+
     </script>
   </body>
 </html>
